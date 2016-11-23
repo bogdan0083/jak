@@ -1,3 +1,307 @@
 .header
-  margin-right: 10px
-  margin-top: 10px
+	text-align: center
+	padding-bottom: 10px
+	+above($screen-sm)
+		text-align: left
+	.topline
+		height: 35px
+		background-color: #101010
+		color white
+		line-height: 35px
+		position: relative
+		&.js-active
+			z-index: 200
+		+above($screen-sm)
+			height: 50px
+			line-height: 50px
+	.search-form
+		background-color: #f3f3f3
+		position: absolute
+		top 35px
+		width: 100%
+		height: 46px
+		left 0
+		text-align: center
+		display: none
+		&.js-active
+			display: block
+		+above($screen-sm)
+			top 50px
+			height: 50px
+		+above($screen-md)
+			display: block !important
+			position: static
+			float: right
+			width: auto
+			background: none
+		.search-field
+			height: 38px
+			background-color: #fff
+			width: 100%
+			border-radius 30px
+			border 1px solid #585858
+			padding 0 60px 0 20px
+			color #101010
+			+above($screen-md)
+				color white
+				background-color: #585858
+				&::placeholder
+					color white
+			&-wrap
+				width: 95%
+				margin: 0 auto
+				position: relative
+				margin-top: 4px
+				+above($screen-sm)
+					margin-top: 0
+				+above($screen-md)
+					width: 350px
+					margin-top: 0
+		.btn-search-submit
+			width: 80px
+			background-color: #101010
+			display: inline-block
+			line-height: 38px
+			height: 38px
+			color white
+			position: absolute
+			right 0
+			top 0
+			padding: 0
+			border-radius 30px
+			+above($screen-sm)
+				top 6px
+			+above($screen-md)
+				sprite($search)
+				text-hide()
+				top 15px
+				border none
+				padding: 0
+				right 15px
+				border-radius 0
+	// MIDDLE
+	.middle
+		position: relative
+		.container
+			position: relative
+			padding-top: 22px
+		clearfix()
+		+above($screen-sm)
+			min-height: 126px
+
+	// LOGO
+	.logo-wrap
+		margin: 10px auto
+		display: block
+		text-align: center
+		+above($screen-sm)
+			position: absolute
+			left 50%
+			top 0
+			width: 200px
+			margin-left: -100px
+		+above($screen-md)
+			width: 570px
+			margin-left: -285px
+	.logo-caption
+		width: 300px
+		margin: -10px auto 0
+		font-size 1.25rem
+		+above($screen-sm)
+			width: auto
+			margin-top: 0
+			font-size: 0.9rem
+		+above($screen-md)
+			font-size: 1.2rem
+	// header-order
+	.header-order-link
+		display: inline-block
+		vertical-align: middle
+		margin-right: 10px
+		text-decoration: none
+		.icon
+			transition all 0.3s
+		&:hover
+			.header-checkout-text
+				text-decoration: none
+			.icon
+				transform translateY(-4px)
+	.header-checkout-text
+		text-decoration: underline
+	.cart-block
+		padding-left: 35px
+		position: relative
+		display: inline-block
+		vertical-align: middle
+		+above($screen-sm)
+			line-height: 1.5
+			margin-left: 20px
+		&:before
+			content 'Список покупок'
+			text-decoration: underline
+			margin-left: 3px
+			margin-right: 20px
+			+above($screen-sm)
+				display: none
+		.icon
+			position: absolute
+			left 10px
+			top 50%
+			margin-top: -10px
+			+above($screen-sm)
+				left 5px
+	.mobile-call
+		color $red
+		display: inline-block
+		vertical-align: middle
+		+above($screen-sm)
+			display: none
+		span
+			text-decoration: underline
+			margin-left: 6px
+	.btn
+		display: block
+		width: 270px
+		margin: 16px auto 0
+	.categories-trigger
+		+above($screen-sm)
+			margin-left: 0
+		&:hover, &.active
+			span
+				color white
+			&:before
+				transform none
+			.nav-trigger
+				background-color: #fff
+				&:before, &:after
+					background-color: #fff
+		.nav-trigger
+			position: absolute
+			left 22px
+			top 50%
+			margin-top: -1px
+	// HEADER LEFT
+	.header-left
+		+above($screen-sm)
+			float: left
+	// HEADER right
+	.header-right
+		+above($screen-sm)
+			float: right
+	.callback-trigger
+		display: inline-block
+		vertical-align: middle
+		margin-left: 40px
+		color $red
+	.btn-excel
+		margin-top: 20px
+.phones
+	padding-left: 30px
+	line-height: 1.3
+	display: inline-block
+	vertical-align: middle
+	position: relative
+	font-size: 1.1rem
+	span
+		color #aaa
+	.icon
+		left 0
+		top 50%
+		position: absolute
+		margin-top: -10px
+		transition all 0.3s
+	&:hover
+		.icon
+			transform translateY(-4px)
+
+.topline-nav
+	float: left
+	a
+		text-decoration: none
+		margin-right: 10px
+		transition all 0.3s
+		opacity: 0.5
+		&:hover
+			opacity: 1
+		&:last-child
+			margin-right: 0
+		+above($screen-md)
+			margin-right: 17px
+
+.catalog-nav
+	width: 270px
+	position: absolute
+	left 15px
+	bottom -10px
+	transform translateY(100%)
+	z-index: 100
+	display: none
+	&.js-active
+		display: block
+	> ul
+		padding: 0
+		margin: 0
+		list-style none
+		> li
+			position: relative
+			&:hover .submenu
+				display: block
+			&:last-child
+				.catalog-nav-item
+					border-radius 0 0 10px 10px
+	.catalog-nav-item
+		display: table
+		height: 40px
+		padding 5px 5px 5px 60px
+		background-color: #fff
+		position: relative
+		width: 100%
+		text-decoration: none
+		transition all 0.3s
+		border 1px solid #d2d2d2
+		margin-bottom: -1px
+		overflow: hidden
+		&:hover
+			background-color: #f3f3f3
+			.wrap
+				background-color: white
+		.text
+			display: table-cell
+			vertical-align: middle
+		.wrap
+			position: absolute
+			height: 100%
+			width: 50px
+			left 0
+			top 0
+			border-radius 0 30% 30% 0
+			img
+				max-width: 70%
+				max-height: 70%
+				position: absolute
+				margin: auto
+				top: 0
+				bottom: 0
+				left: 0
+				right: 0
+	.submenu
+		position: absolute
+		width: 300px
+		right -300px
+		padding: 0
+		margin: 0
+		list-style none
+		overflow: hidden
+		top 0
+		border-radius 0 20px 20px 0
+		display: none
+		a
+			display: block
+			padding 10px 15px
+			text-decoration: none
+			background-color: white
+			transition all 0.3s
+			padding-left: 30px
+			&:hover
+				background-color: #f3f3f3
+				color #f61e1f

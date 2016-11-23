@@ -35,11 +35,10 @@
 		<!-- start topline -->
 		<div class="topline">
 			<div class="container">
-				<a href="" class="nav-trigger-wrap visible-xs visible-sm"><span class="nav-trigger" role="button"></span>
-					Меню</a>
+				<a href="" class="nav-trigger-wrap visible-xs">Меню</a>
 
 				<!-- start topline-nav -->
-				<nav class="topline-nav hidden-xs hidden-sm">
+				<nav class="topline-nav hidden-xs">
 					<a href="">О компании</a>
 					<a href="">Условия доставки</a>
 					<a href="">Услуги</a>
@@ -53,8 +52,10 @@
 
 				<button class="mobile-search-trigger icon i-search"></button>
 				<form class="search-form">
-					<input type="text" class="search-field" placeholder="Поиск среди 1000 наименований">
-					<button class="icon i-search"></button>
+					<div class="search-field-wrap">
+						<input type="text" class="search-field" placeholder="Поиск среди 1000 наименований">
+						<button class="icon btn-search-submit">Найти</button>
+					</div>
 				</form>
 			</div>
 		</div>
@@ -74,30 +75,115 @@
 				<!-- start header-left -->
 				<div class="header-left">
 					<a href="" class="header-order-link">
-						<span class="header-checkout-text">Оформить</span>
+						<span class="header-checkout-text hidden-xs">Оформить заказ</span>
 						<div class="cart-block">
 							<i class="icon i-list"></i>
-							<div class="cart-block-count">В списке покупок: 1 тов.</div>
-							<div class="cart-block-sum">На сумму: 1500 руб.</div>
+							<div class="cart-block-count hidden-xs">В списке покупок: 1 тов.</div>
+							<div class="cart-block-sum hidden-xs">На сумму: 1500 руб.</div>
 						</div>
 					</a>
-					<a href="" class="btn"><span class="categories-trigger">Каталог товаров</span></a>
+					<a href="tel:8-888-888-88-88" class="mobile-call"><i class="icon i-phone-red"></i><span>Позвонить</span></a>
+					<a href="" class="btn categories-trigger js-categories-trigger"><span class="nav-trigger"></span><span>Каталог товаров</span></a>
 				</div>
 				<!-- end header-left -->
 
 				<!-- start header-right -->
-				<div class="header-right">
+				<div class="header-right hidden-xs">
 					<div class="header-right-wrap">
-						<a href="" class="phones">
+						<div class="phones">
 							<i class="icon i-phone-red"></i>
 							<div class="phone"><span>(8452)</span> 51-61-82</div>
 							<div class="phone"><span>(8452)</span> 94-64-43</div>
-						</a>
+						</div>
 						<a href="" class="callback-trigger fancybox-modal">Вам перезвонить?</a>
 					</div>
-					<a href="" class="btn btn-black">Скачать прайс-лист</a>
+					<a href="" class="btn btn-black btn-excel"><i class="icon i-excel"></i><span>Скачать прайс-лист</span></a>
 				</div>
 				<!-- end header-right -->
+
+				<!-- start catalog-nav -->
+				<nav class="catalog-nav">
+					<ul>
+						<li>
+							<a href="" class="catalog-nav-item">
+								<div class="wrap"><img src="images/cat1.png" alt="Трубы"></div>
+								<span class="text">Трубы</span>
+							</a>
+						</li>
+						<li>
+							<a href="" class="catalog-nav-item">
+								<div class="wrap"><img src="images/cat2.png" alt="Пиломатериалы"></div>
+								<span class="text">Пиломатериалы</span>
+							</a>
+						</li>
+						<li>
+							<a href="" class="catalog-nav-item">
+								<div class="wrap"><img src="images/cat3.png" alt="Металлопрокат"></div>
+								<span class="text">Металлопрокат</span>
+							</a>
+						</li>
+						<li>
+							<a href="" class="catalog-nav-item">
+								<div class="wrap"><img src="images/cat4.png" alt="Метизы"></div>
+								<span class="text">Метизы</span>
+							</a>
+						</li>
+						<li>
+							<a href="" class="catalog-nav-item">
+								<div class="wrap"><img src="images/cat5.png" alt="Люки канализационные"></div>
+								<span class="text">Люки канализационные</span>
+							</a>
+							<ul class="submenu">
+								<li><a href="">Трубы профильные</a></li>
+								<li><a href="">Трубы стальные водогазопроводные
+									и электросварные</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="" class="catalog-nav-item">
+								<div class="wrap"><img src="images/cat6.png" alt="Кирпич керамический"></div>
+								<span class="text">Кирпич керамический</span>
+							</a>
+						</li>
+						<li>
+							<a href="" class="catalog-nav-item">
+								<div class="wrap"><img src="images/cat7.png" alt="Электроды, отрезные диски"></div>
+								<span class="text">Электроды, отрезные диски</span>
+							</a>
+						</li>
+						<li>
+							<a href="" class="catalog-nav-item">
+								<div class="wrap"><img src="images/cat8.png" alt="Фасонные части ВЧШГ"></div>
+								<span class="text">Фасонные части ВЧШГ</span>
+							</a>
+						</li>
+						<li>
+							<a href="" class="catalog-nav-item">
+								<div class="wrap"><img src="images/cat9.png" alt="Абсцентноцементные изделия"></div>
+								<span class="text">Абсцентноцементные изделия</span>
+							</a>
+						</li>
+						<li>
+							<a href="" class="catalog-nav-item">
+								<div class="wrap"><img src="images/cat10.png" alt="Гипсокартон и комплектующие"></div>
+								<span class="text">Гипсокартон и комплектующие</span>
+							</a>
+						</li>
+						<li>
+							<a href="" class="catalog-nav-item">
+								<div class="wrap"><img src="images/cat11.png" alt="Запорная арматура"></div>
+								<span class="text">Запорная арматура</span>
+							</a>
+						</li>
+						<li>
+							<a href="" class="catalog-nav-item">
+								<div class="wrap"><img src="images/cat12.png" alt="Кровельные материалы"></div>
+								<span class="text">Кровельные материалы</span>
+							</a>
+						</li>
+					</ul>
+				</nav>
+				<!-- end catalog-nav -->
 			</div>
 		</div>
 		<!-- end middle -->
@@ -298,7 +384,9 @@
 				<a href="" class="callback-trigger fancybox-modal"><i class="icon i-phone-red"></i><span>Вам перезвонить?</span></a>
 			</div>
 			<div class="footer-bottom">
-				<div class="copyright">2016 © Все права защищены.“Жак”. Строительные материалы в Саратове оптом и в розницу</div>
+				<div class="copyright">2016 © Все права защищены.“Жак”. Строительные материалы в Саратове оптом и в
+					розницу
+				</div>
 				<div class="made-by">Разработка сайта: <a href="http://cherepkova.ru">cherepkova.ru</a></div>
 			</div>
 		</div>
