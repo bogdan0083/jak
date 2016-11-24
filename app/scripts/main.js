@@ -47,10 +47,8 @@ $(document).ready(function () {
             pauseOnHover: false,
             dots: true
         });
-        
-        $('.mega-slider').on('init', function () {
-            
-        });
+
+        initParallax();
         //
         // $('.about-slider .wrapper').slick({
         //     slidesToShow: 1,
@@ -81,7 +79,75 @@ $(document).ready(function () {
         // });
     }
 
+    $('.fancybox-modal').fancybox({
+        closeBtn: false,
+        fitToView: false,
+        scrolling: 'visible',
+        padding: 0
+    });
+
+    $('.fancybox').fancybox();
+
+    $(function () {
+        var stickWidth = 880;
+        var win = $(window);
+        var menu = $(".js-sticky-col");
+
+        if (win.width() > stickWidth) {
+            menu.stick_in_parent();
+        }
+        win.resize(function () {
+            if (win.width() > stickWidth) {
+                menu.stick_in_parent();
+            } else {
+                menu.trigger("sticky_kit:detach");
+            }
+        });
+    });
+
     function toggleOverlay() {
         $('.page-wrapper').toggleClass('js-overlay');
+    }
+
+    // функция для параллакса. инициализирует Событие на элементах
+    function initParallax () {
+
+        var wScroll;
+        var shift;
+        var windowHeight = $(window).height();
+
+        var $parallaxItem = $('.js-parallax-item');
+
+        if (!$parallaxItem.length) {
+            return;
+        }
+
+        $(window).on('scroll', onParallaxMove);
+
+        function onParallaxMove (e) {
+
+            wScroll = $(window).scrollTop();
+
+            $parallaxItem.each(function(_, item) {
+
+                shift = parseInt(wScroll);
+
+                if (shift > 0) {
+
+                    var parallaxRatio = $(this).data('parallax-ratio');
+
+                    $(this).css({
+                        transform: 'translateY(' + shift * parallaxRatio + 'px'
+                    });
+                }
+
+
+
+
+
+
+            });
+
+        }
     }
 });

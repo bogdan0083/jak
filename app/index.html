@@ -95,7 +95,7 @@
 							<div class="phone"><span>(8452)</span> 51-61-82</div>
 							<div class="phone"><span>(8452)</span> 94-64-43</div>
 						</div>
-						<a href="" class="callback-trigger fancybox-modal">Вам перезвонить?</a>
+						<a href="#callback-popup" class="callback-trigger fancybox-modal">Вам перезвонить?</a>
 					</div>
 					<a href="" class="btn btn-black btn-excel"><i class="icon i-excel"></i><span>Скачать прайс-лист</span></a>
 				</div>
@@ -446,6 +446,7 @@
 
 		<!-- start contact-section -->
 		<section class="contact-section">
+
 			<!-- start insert map here -->
 			<div id="map"></div>
 			<!-- end insert map here -->
@@ -479,8 +480,25 @@
 		<!-- end contact-section -->
 	</div>
 	<!-- end page-content -->
+	<!-- start callback-popup -->
+	<div class="callback-popup" id="callback-popup">
+		<a href="javascript:$.fancybox.close()" class="popup-close">
+		</a>
+
+		<h2 class="heading">Обратный звонок</h2>
+		<p>Введите контактные данные, наши менеджеры
+			свяжутся с Вами в ближайшее время</p>
+		<form class="callback-form">
+			<input type="text" class="field" name="name" placeholder="Имя">
+			<input type="text" class="field" name="phone-mail" placeholder="Телефон">
+			<textarea class="field field-text" name="question" placeholder="Комментарий (если есть)"></textarea>
+			<button class="btn btn-red btn-send btn-full"><i class="icon i-arr-right-white"></i><span>Отправить</span>
+			</button>
+		</form>
+		<!-- begin footer -->
+	</div>
+	<!-- end callback-popup -->
 </div>
-<!-- begin footer -->
 <footer class="footer">
 	<div class="container">
 		<a href="" class="logo hidden-xs"><img src="images/logo-small.png" alt="Жак"></a>
@@ -509,7 +527,7 @@
 				<div class="phone"><span>(8452)</span> 51-61-82</div>
 				<div class="phone"><span>(8452)</span> 94-64-43</div>
 			</div>
-			<a href="" class="callback-trigger fancybox-modal"><i class="icon i-phone-red"></i><span>Вам перезвонить?</span></a>
+			<a href="#callback-popup" class="callback-trigger fancybox-modal"><i class="icon i-phone-red"></i><span>Вам перезвонить?</span></a>
 		</div>
 		<div class="footer-col-wrap hidden-xs">
 			<div class="cart-block">
@@ -537,8 +555,10 @@
 <!-- endbower-->
 <!-- endbuild-->
 <!-- build:js scripts/libs.js-->
+<script src="scripts/parallax.min.js"></script>
 <script src="scripts/slick.min.js"></script>
 <script src="scripts/jquery.fancybox.pack.js"></script>
+<script src="scripts/sticky-kit.min.js"></script>
 <!-- endbuild-->
 <!-- build:js scripts/main.js-->
 <script src="scripts/main.js"></script>

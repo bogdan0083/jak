@@ -72,6 +72,13 @@
           </mappings>
         </serverdata>
       </paths>
+      <paths name="mebel">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
       <paths name="myhost">
         <serverdata>
           <mappings>
@@ -80,6 +87,13 @@
         </serverdata>
       </paths>
       <paths name="professional">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="quest">
         <serverdata>
           <mappings>
             <mapping local="$PROJECT_DIR$" web="/" />
