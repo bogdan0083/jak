@@ -1,0 +1,78 @@
+.footer
+	height: 172px
+	overflow: hidden
+	background-color: #fff
+	margin-top: -172px
+	position: relative
+	z-index: 4
+	text-align: center
+	.copyright, .made-by
+		margin 30px 0
+	+above($screen-sm)
+		text-align: left
+		padding-top: 15px
+		.footer-bottom
+			padding-top: 20px
+			font-size 0.9rem
+		.copyright, .made-by
+			margin: 0
+		.copyright
+			display: inline-block
+		.made-by
+			float: right
+	.logo
+		float: left
+		margin-right: 50px
+	.footer-nav
+		float: left
+		width: 640px
+		display: none
+		+above($screen-md)
+			display: block
+		clearfix()
+		ul
+			padding: 0
+			margin: 0
+			list-style none
+			float: left
+			width: 33.3333%
+		a
+			text-decoration: none
+			display: block
+			margin 6px 0
+			transition all 0.3s
+			&:hover
+				color $red
+	.footer-col-wrap, .footer-contact
+		float: right
+	.footer-bottom
+		clear both
+	.footer-contact
+		text-align: right
+	.phones
+		font-size 1.5rem
+	.callback-trigger
+		display: block
+		color $red
+		margin-top: 5px
+		.icon
+			margin-right: 8px
+	.footer-checkout-link
+		display: block
+	.price-list-link
+		margin-top: 28px
+		display: block
+		.icon
+			margin-right: 10px
+	.cart-block
+		padding-left: 30px
+		position: relative
+		vertical-align: middle
+		display: block
+		.icon
+			position: absolute
+			left 10px
+			top 50%
+			margin-top: -10px
+			+above($screen-sm)
+				left 5px

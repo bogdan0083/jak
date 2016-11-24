@@ -1,4 +1,250 @@
 // mega slider
 
 .mega-slider
-	background-color: gray
+	height: 452px
+	overflow: hidden
+	display: none
+	.container, .slide, .slick-list, .slick-track
+		height: 100%
+	.slide
+		overflow: hidden
+	.slide-content
+		height: 100%
+		display: table
+		width: 585px
+		position: relative
+		&:before
+			content ''
+			width: 2000px
+			height: 2000px
+			position: absolute
+			background-color: rgba(white, 0.8)
+			border-radius 50%
+			top 50%
+			margin-top: -1000px
+			left -1450px
+		.inner
+			display: table-cell
+			vertical-align: middle
+			position: relative
+			z-index: 10
+			text-align: right
+			padding-right: 100px
+	h1
+		font-size 2.813rem
+		font-weight: 400
+		text-transform: uppercase
+		margin: 0
+	p
+		padding: 0
+		margin: 0
+		font-size: 1.5rem
+		line-height: 1.5
+	.price
+		font-size 2.813rem
+		color $red
+	.btn
+		margin-top: 20px
+	+above($screen-sm)
+		display: block
+
+.slider-dots
+	margin-top: 30px
+	margin-right: 90px
+	.dot
+		width: 10px
+		height: 10px
+		padding: 0
+		border-radius 50%
+		border 1px solid #f33d3d
+		display: inline-block
+		transition all 0.3s
+		margin 5px 2px
+		&.js-active
+			background-color: #f33d3d
+		&:hover
+			background-color: #f33d3d
+
+.heading
+	font-size 1.5rem
+	text-transform: uppercase
+	text-align: center
+	font-weight: 400
+	+above($screen-sm)
+		font-size: 2.25rem
+
+// CATEGORIES
+
+.categories
+	padding-top: 10px
+	.wrapper
+		border-bottom: 1px solid #e1e1e1
+		padding-bottom: 40px
+
+
+.heading-caption
+	text-align: center
+	color $red
+	font-size 1.5rem
+	margin-top: 0
+	+above($screen-sm)
+		margin-top: -20px
+
+.category-block
+	width: 100%
+	height: 100px
+	display: block
+	border-radius 20px
+	border 1px solid #e8e8e8
+	transition color 0.3s, opacity 0.3s
+	text-decoration: none
+	overflow: hidden
+	position: relative
+	margin 15px 0
+	z-index: 10
+	padding-left: 50px
+	+above($screen-sm)
+		padding-left: 70px
+		height: 200px
+	+above($screen-md)
+		padding-left: 120px
+	&:hover:before
+		transform scale(1)
+	&:before
+		content ''
+		width: 220px
+		height: 220px
+		background-color: #f94a49
+		border-radius 50%
+		left -80px
+		top 50%
+		margin-top: -110px
+		position: absolute
+		transition all 0.3s
+		transform scale(0)
+		display: none
+		+above($screen-sm)
+			display: block
+	.inner
+		display: table
+		vertical-align: middle
+		font-size 1.125rem
+		line-height: 1.5
+		text-transform: uppercase
+		text-align: center
+		height: 100%
+		width: 100%
+		padding 0 20px
+		span
+			display: table-cell
+			vertical-align: middle
+	.category-img
+		position: absolute
+		left 0
+		width: 50px
+		top 0
+		height: 100%
+		+above($screen-sm)
+			width: 100px
+		+above($screen-md)
+			width: 160px
+		img
+			position: absolute
+			top: 0
+			bottom: 0
+			left: 0
+			right: 0
+			margin: auto
+			transform translateX(-30%)
+			+above($screen-md)
+				transform translateX(-20%)
+	&:hover
+		border-color: $red
+		color $red
+
+.categories-row
+	margin-top 30px
+
+
+.about-section
+	padding-top: 30px
+	.wrapper
+		max-width: 1060px
+		margin: 0 auto
+		width: 100%
+
+.feature
+	padding-left: 66px
+	position: relative
+	.text
+		display: block
+		padding 20px 0
+	.icon
+		left 20px
+		transform translate(-50%, -40%)
+		top 50%
+		position: absolute
+
+// CEO BLOCK
+
+.ceo-block
+	line-height 1.63
+	padding-bottom: 30px
+	.btn
+		display: block
+		margin: 40px auto 0
+	p
+		text-indent 30px
+
+.contact-section
+	height: 438px
+	position: relative
+	overflow: hidden
+	.container
+		height: 100%
+	#map
+		position: absolute
+		left: 0
+		top: 0
+		width: 100%
+		height: 100%
+		background-color: gray
+	h2
+		+above($screen-sm)
+			margin-bottom: 15px
+			text-align: left
+	.contact-info
+		position: relative
+		z-index: 10
+		line-height: 1.5
+		height: 100%
+		padding 1px
+		&:before
+			content ''
+			width: 2000px
+			height: 2000px
+			position: absolute
+			background-color: rgba(white, 0.8)
+			border-radius 50%
+			top 50%
+			margin-top: -1000px
+			right -1450px
+		.inner
+			position: relative
+			z-index: 10
+		+above($screen-sm)
+			width: 515px
+			float: right
+			padding-left: 100px
+		&-block
+			margin 14px auto
+			width: 320px
+			+above($screen-sm)
+				text-align: left
+				width: auto
+		span
+			text-align: left
+	.icon
+		margin-right: 15px
+		vertical-align: top
+		margin-top: 4px
