@@ -229,7 +229,7 @@
 		+above($screen-md)
 			margin-right: 17px
 
-.catalog-nav
+.catalog-nav, .catalog-nav-aside
 	width: 270px
 	position: absolute
 	left 15px
@@ -250,22 +250,24 @@
 			&:last-child
 				.catalog-nav-item
 					border-radius 0 0 10px 10px
+	a.active
+		background-color: #f3f3f3
+		.wrap:before
+			background-color: #f94a49
 	.catalog-nav-item
 		display: table
 		height: 40px
-		padding 5px 5px 5px 60px
+		padding 5px 5px 5px 70px
 		background-color: #fff
 		position: relative
 		width: 100%
 		text-decoration: none
 		transition all 0.3s
-		border 1px solid #d2d2d2
+		border 1px solid #e6e6e6
 		margin-bottom: -1px
 		overflow: hidden
 		&:hover
 			background-color: #f3f3f3
-			.wrap
-				background-color: white
 		.text
 			display: table-cell
 			vertical-align: middle
@@ -275,7 +277,16 @@
 			width: 50px
 			left 0
 			top 0
-			border-radius 0 30% 30% 0
+			&:before
+				content ''
+				width: 70px
+				height: 70px
+				background-color: #fff
+				left -16px
+				top 50%
+				margin-top: -35px
+				position: absolute
+				border-radius 50%
 			img
 				max-width: 70%
 				max-height: 70%
@@ -296,13 +307,48 @@
 		top 0
 		border-radius 0 20px 20px 0
 		display: none
-		a
+		a, span
 			display: block
 			padding 10px 15px
 			text-decoration: none
 			background-color: white
 			transition all 0.3s
 			padding-left: 30px
-			&:hover
-				background-color: #f3f3f3
-				color #f61e1f
+		a:hover, a.active
+			background-color: #f3f3f3
+			color #f61e1f
+
+.catalog-nav-aside
+	position: relative
+	z-index: 1
+	left: 0
+	top: 0
+	margin: 0 auto
+	transform none
+	display: none
+	&.js-active
+		display: block
+	+above($screen-sm)
+		display: block !important
+	> ul > li:first-child > a
+		border-radius 15px 15px 0 0
+	.submenu
+		position: static
+		display: block
+		width: auto
+		border-radius 0
+		margin-top: 1px
+		border-left: 1px solid #e6e6e6
+		border-right: 1px solid #e6e6e6
+		a, span
+			position: relative
+			&:before
+				content '-'
+				position: absolute
+				left 21px
+				color black
+				top 8px
+		a:hover,
+		a.active
+			&:before
+				color $red

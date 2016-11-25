@@ -398,7 +398,7 @@
 		padding-bottom: 40px
 
 .callback-popup, .checkout-popup
-	width: 290px
+	width: 280px
 	padding 10px
 	margin: 0 auto
 	border 1px solid gray
@@ -421,3 +421,142 @@
 			font-size: 1rem
 			line-height: 1.3
 			margin-top: 0
+
+			
+.category-inner-block
+	width: 100%
+	border 1px solid #e6e6e6
+	border-radius 20px
+	display: block
+	padding 10px
+	text-decoration: none
+	line-height: 1.4
+	margin 30px 0
+	position: relative
+	transition all 0.3s
+	overflow: hidden
+	+above($screen-sm)
+		padding-left: 140px
+	+above($screen-md)
+		padding-left: 210px
+		padding-top: 20px
+	&:hover
+		border-color $red
+		background-color: #f3f3f3
+		h4
+			color $red 
+	h4
+		font-size 1.125rem
+		text-transform: uppercase
+		margin-top: 20px
+		+above($screen-sm)
+			margin-top: 0
+	.category-img
+		background-color: #fff
+		display: block
+		margin: 0 auto
+		width: 160px
+		height: 160px
+		position: relative
+		+above($screen-sm)
+			position: absolute
+			height: 100%
+			top 0
+			left 0
+			width: 100px
+			&:before
+				content ''
+				width: 400px
+				height: 400px
+				background-color: white
+				left -278px
+				top 50%
+				margin-top: -200px
+				position: absolute
+				border-radius 50%
+		+above($screen-md)
+			width: 160px
+			left 10px
+			&:before
+				left -218px
+		img
+			position: absolute
+			top: 0
+			bottom: 0
+			left: 0
+			right: 0
+			margin auto
+
+// CEO BLOCK INNER
+	.ceo-block-inner
+		border-top: 1px solid #e8e8e8
+		padding-top: 6px
+		line-height: 1.5
+
+.special-block
+	height: 290px
+	display: block
+	overflow: hidden
+	position: relative
+	margin 30px 0
+	&.right
+		.special-block-content
+			float: right
+			padding-right: 0
+			padding-left: 20px
+			+above($screen-sm)
+				padding-left: 100px
+			.inner
+				text-align: left
+			&:before
+				left auto
+				right -1450px
+	.container
+		height: 100%
+	.special-block-content
+		height: 100%
+		display: table
+		max-width: 585px
+		position: relative
+		padding-right: 20px
+		width: 100%
+
+		+above($screen-sm)
+			padding-right: 100px
+		&:before
+			content ''
+			width: 2000px
+			height: 2000px
+			position: absolute
+			background-color: rgba(white, 0.8)
+			border-radius 50%
+			top 50%
+			margin-top: -1000px
+			left -1450px
+		.inner
+			display: table-cell
+			vertical-align: middle
+			position: relative
+			z-index: 10
+			text-align: right
+	h2
+		font-size 1.3rem
+		font-weight: 400
+		text-transform: uppercase
+		margin: 0
+		+above($screen-sm)
+			font-size: 2.5rem
+	p
+		padding: 0
+		margin: 0
+		font-size: 1.1rem
+		line-height: 1.3
+		+above($screen-sm)
+			font-size: 1.3rem
+	.price
+		font-size 1.3rem
+		color $red
+		+above($screen-sm)
+			font-size: 2.813rem
+	.btn
+		margin-top: 20px
