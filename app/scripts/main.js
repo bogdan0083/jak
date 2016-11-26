@@ -54,12 +54,45 @@ $(document).ready(function () {
 
     });
 
+    $('.custom-select').selectmenu();
+
     $('.fancybox-modal').fancybox({
         closeBtn: false,
         fitToView: false,
         scrolling: 'visible',
         padding: 0,
         type: 'inline'
+    });
+
+    $('.js-modal-timer-trigger').click(function (e) {
+        e.preventDefault();
+
+        $.fancybox($('#success-popup'), {
+            closeBtn: false,
+            fitToView: false,
+            scrolling: 'visible',
+            padding: 0,
+            type: 'inline',
+            beforeShow: function () {
+
+                var count = 4;
+
+                var timer = setInterval(function () {
+
+                    if (count === 0) {
+
+                        $.fancybox.close();
+
+                        clearInterval(timer);
+                    }
+
+                    $('.js-success-countdown').text(count);
+                    count--;
+
+                }, 1000);
+            }
+        });
+
     });
 
     $('.fancybox').fancybox();

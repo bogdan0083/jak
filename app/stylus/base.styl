@@ -206,6 +206,34 @@ button:focus
 		border-color #101010
 		&:before
 			background-color: #101010
+	&-cancel
+		&:hover
+			.icon:after
+				opacity: 0
+			.icon:before
+				opacity: 1
+		.icon
+			position: absolute
+			left 15px
+			top 50%
+			margin-top: -5px
+			&:before
+				sprite($cross_hover)
+	&-success
+		padding-left: 30px
+		&:hover
+			.icon:after
+				opacity: 0
+			.icon:before
+				opacity: 1
+		.icon
+			position: absolute
+			left 15px
+			top 50%
+			margin-top: -5px
+			&:before
+				sprite($check_white)
+
 	&-excel
 		.icon
 			position: absolute
