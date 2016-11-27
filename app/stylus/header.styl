@@ -217,7 +217,7 @@
 
 .topline-nav
 	float: left
-	a
+	a, span
 		text-decoration: none
 		margin-right: 10px
 		transition all 0.3s
@@ -228,6 +228,8 @@
 			margin-right: 0
 		+above($screen-md)
 			margin-right: 17px
+	span
+		opacity: 1
 
 .catalog-nav, .catalog-nav-aside
 	width: 270px
@@ -314,6 +316,14 @@
 			background-color: white
 			transition all 0.3s
 			padding-left: 30px
+			position: relative
+			&:before
+				content '-'
+				position: absolute
+				left 21px
+				color black
+				top 8px
+
 		a:hover, a.active
 			background-color: #f3f3f3
 			color #f61e1f
@@ -348,7 +358,6 @@
 				left 21px
 				color black
 				top 8px
-
 		a:hover,
 		span
 			color $red

@@ -238,20 +238,27 @@
 			padding-left: 100px
 		&-block
 			margin 14px auto
-			width: 320px
+			max-width: 320px
+			position: relative
+			padding-left: 40px
+
+			.icon
+				position: absolute
+				left 12px
+				top 50%
+				transform translate(-50%, -50%)
+			.i-clock
+				top 2px
+				transform translateX(-50%)
 			+above($screen-sm)
 				text-align: left
 				width: auto
 		span
 			text-align: left
-	.icon
-		margin-right: 15px
-		vertical-align: top
-		margin-top: 4px
 
 // about BLOCK
 
-.about-block
+.about-block, .supp-block
 	padding-bottom: 30px
 	overflow: hidden
 	padding-top: 25px
@@ -970,3 +977,30 @@
 	margin: 0 auto
 	padding: 0
 	padding-top: 25px
+
+.supp-block
+	height: auto
+	+above($screen-sm)
+		height: 400px
+	padding-top: 6px
+	.heading
+		font-size 1rem
+		+above($screen-sm)
+			font-size: 1.5rem
+	.supp-feature
+		max-width: 450px
+		position: relative
+		margin: 0 auto
+		padding 10px 0 10px 45px
+		text-align: left
+		.icon
+			position: absolute
+			left 10px
+			top 50%
+			transform translate(-50%, -50%)
+
+.suppliers-text
+	max-width: 1030px
+	margin: 0 auto
+	line-height: 1.5
+	padding-bottom 30px
