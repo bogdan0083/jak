@@ -18,12 +18,12 @@ $(document).ready(function () {
         toggleOverlay();
     });
 
-    $('.page-wrapper').on('click', '.js-overlay', function (e) {
+    $('body').on('click', '.js-overlay', function (e) {
          e.stopPropagation();
          e.stopImmediatePropagation();
 
-        if ($(this).hasClass('js-overlay')) {
-            $(this).removeClass('js-overlay');
+        if ($(e.target).hasClass('js-overlay')) {
+            $('.js-overlay').removeClass('js-overlay');
 
             $('.mobile-menu').removeClass('active');
             $('.page-wrapper').removeClass('active');
@@ -52,6 +52,12 @@ $(document).ready(function () {
             $('.catalog-nav-aside').toggleClass('js-active');
         }
 
+    });
+
+    $('.service-block .btn').hover(function () {
+        $(this).parent().find('.icon').addClass('active');
+    }, function () {
+        $(this).parent().find('.icon').removeClass('active');
     });
 
     $('.custom-select').selectmenu();

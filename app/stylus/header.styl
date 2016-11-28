@@ -85,7 +85,8 @@
 		position: relative
 		.container
 			position: relative
-			padding-top: 22px
+			+above($screen-sm)
+				padding-top: 22px
 		clearfix()
 		+above($screen-sm)
 			min-height: 126px
@@ -114,6 +115,10 @@
 			font-size: 0.9rem
 		+above($screen-md)
 			font-size: 1.2rem
+	.header-right-wrap
+		&:hover
+			.icon
+				transform translateY(-4px)
 	// header-order
 	.header-order-link
 		display: inline-block
@@ -155,6 +160,7 @@
 		color $red
 		display: inline-block
 		vertical-align: middle
+		margin-top: 2px
 		+above($screen-sm)
 			display: none
 		span
@@ -168,8 +174,7 @@
 		+above($screen-sm)
 			margin-left: 0
 		&:hover, &.active
-			span
-				color white
+			color white
 			&:before
 				transform none
 			.nav-trigger
@@ -196,6 +201,7 @@
 		color $red
 	.btn-excel
 		margin-top: 20px
+		float: right
 .phones
 	padding-left: 30px
 	line-height: 1.3
@@ -287,7 +293,7 @@
 				left -16px
 				top 50%
 				margin-top: -35px
-				position: absoluteh
+				position: absolute
 				border-radius 50%
 			img
 				max-width: 70%
@@ -301,7 +307,7 @@
 	.submenu
 		position: absolute
 		width: 300px
-		right -300px
+		right -299px
 		padding: 0
 		margin: 0
 		list-style none
@@ -309,6 +315,9 @@
 		top 0
 		border-radius 0 20px 20px 0
 		display: none
+		border 1px solid #e6e6e6
+		border-bottom: 0
+		border-top: 0
 		a, span
 			display: block
 			padding 10px 15px

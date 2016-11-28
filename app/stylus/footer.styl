@@ -37,13 +37,17 @@
 			list-style none
 			float: left
 			width: 33.3333%
-		a
+		a, span
 			text-decoration: none
 			display: block
 			margin 6px 0
 			transition all 0.3s
 			&:hover
 				color $red
+		span
+			color $red
+	.icon
+		transition transform 0.3s
 	.footer-col-wrap, .footer-contact
 		float: right
 	.footer-bottom
@@ -56,6 +60,13 @@
 		display: block
 		color $red
 		margin-top: 5px
+		text-decoration: none
+		span
+			text-decoration: underline
+		&:hover span
+			text-decoration: none
+		&:hover .icon
+			transform translateY(-4px)
 		.icon
 			margin-right: 8px
 	.footer-checkout-link
@@ -63,6 +74,12 @@
 	.price-list-link
 		margin-top: 28px
 		display: block
+		span
+			text-decoration: underline
+		&:hover span
+			text-decoration: none
+		&:hover .icon
+			transform translateY(-4px)
 		.icon
 			margin-right: 10px
 	.cart-block
@@ -70,6 +87,8 @@
 		position: relative
 		vertical-align: middle
 		display: block
+		&:hover .icon
+			transform translateY(-4px)
 		.icon
 			position: absolute
 			left 10px

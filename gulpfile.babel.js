@@ -35,9 +35,9 @@ gulp.task('styles', function() {
         .pipe($.stylus({
             use: [rupture(), bootstrap(), jeet()]
         }))
-        // .pipe(combineMq({
-        //     beautify: true
-        // }))
+        .pipe(combineMq({
+            beautify: true
+        }))
         //.pipe(uncss({
         //     html: ['app/index.html'],
         //     ignore: [/slick/]
@@ -108,7 +108,6 @@ gulp.task('html', ['styles'], () => {
 
 gulp.task('images', () => {
     return gulp.src('app/images/**/*')
-        .pipe(imagemin())
         .pipe(gulp.dest('dist/images'));
 });
 

@@ -247,6 +247,10 @@
 				left 12px
 				top 50%
 				transform translate(-50%, -50%)
+			.i-mail
+				transform none
+				margin-top: -8px
+				left 1px
 			.i-clock
 				top 2px
 				transform translateX(-50%)
@@ -636,8 +640,10 @@
 	overflow: hidden
 	position: relative
 	transition all 0.3s
+	&:hover
+		border-color $red
 	&:hover:before
-		opacity: 0
+		transform translateY(250px)
 	&:before
 		content ''
 		width: 500px
@@ -724,6 +730,10 @@
 	margin: 30px auto
 	position: relative
 	padding-top: 1px
+	.icon
+		transition transform 0.3s
+		&.active
+			transform translateY(-4px)
 	.icon-wrap
 		min-height: 50px
 	&:before

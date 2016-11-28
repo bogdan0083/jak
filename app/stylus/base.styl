@@ -173,6 +173,7 @@ button:focus
 	max-width: 230px
 	width: 100%
 	transform translateZ(0)
+	transition all 0.3s
 	&-full
 		max-width: 100%
 	&-send
@@ -184,11 +185,8 @@ button:focus
 	span
 		z-index: 10
 		position: relative
-		transition all 0.3s
 	&:hover
 		color white
-		span
-			color white
 		&:before
 			transform translateZ(0)
 	&:before
@@ -235,6 +233,7 @@ button:focus
 				sprite($check_white)
 
 	&-excel
+		padding-left: 20px
 		.icon
 			position: absolute
 			left 20px
@@ -256,8 +255,17 @@ button:focus
 			background-color: black
 			border-color: transparent
 	&-to-cart
+		.i-list-add-red:before
+			sprite($list_add)
+		&:hover
+			.i-list-add-red
+				&:before
+					opacity: 1
+				&:after
+					opacity: 0
+
 		.icon
-			margin-right: 8px
+			margin-right: 12px
 	&-check
 		font-size 1.125rem
 		line-height: 36px
